@@ -109,3 +109,8 @@ export const eventStartDeleting = () => {
         }
     }
 }
+
+
+export const eventLogout = () => ({
+    type: types.eventLogout,
+})

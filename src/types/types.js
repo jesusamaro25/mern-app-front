@@ -11,6 +11,7 @@ export const types = {
     eventStartAddNew: '[event] Start Add New',
     //CRUD
     eventLoaded: '[event] Start Add New',
+    eventLogout: '[event] Logout',
 
     authCheckingFinish: '[auth] Checking Finish',
     authStartLogin: '[auth] Start Login',

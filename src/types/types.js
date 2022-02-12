@@ -8,6 +8,9 @@ export const types = {
     eventClearActive: '[event] Clear Active',
     eventUpdate: '[event] Update',
     eventDelete: '[event] Delete',
+    eventStartAddNew: '[event] Start Add New',
+    //CRUD
+    eventLoaded: '[event] Start Add New',
 
     authCheckingFinish: '[auth] Checking Finish',
     authStartLogin: '[auth] Start Login',

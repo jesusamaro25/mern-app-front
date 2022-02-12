@@ -46,7 +46,7 @@ export const startRegister = (email, password, name) => {
 
 export const startChecking = () => {
     return async(dispatch) => {
-        const resp = await fetchConToken('auth/new')
+        const resp = await fetchConToken('auth/renew')
         const body = await resp.json()
 
         if (body.ok) {
@@ -57,7 +57,7 @@ export const startChecking = () => {
                 name: body.name
             }))
         } else {
-            Swal.fire('Error', body.msg, 'error')
+            //   Swal.fire('Error', body.msg, 'error')
             dispatch(CheckingFinish())
         }
     }
@@ -65,4 +65,16 @@ export const startChecking = () => {
 
 const CheckingFinish = () => ({
     type: types.authCheckingFinish
+})
+
+
+export const startLogout = () => {
+    return (dispatch) => {
+        localStorage.clear();
+        dispatch(logout())
+    }
+}
+
+const logout = () => ({
+    type: types.authLogout
 })
